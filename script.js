@@ -13,3 +13,13 @@ setInterval(() => {
     current = (current + 1) % headlines.length;
     showHeadline(current);
 }, 3000);
+
+
+
+var animation = lottie.loadAnimation({
+    container: document.getElementById('lottie-animation'), // the dom element
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: './image/animation.json' // path to your animation JSON file
+});

@@ -237,74 +237,134 @@ h1 {
 .all-heads {
     color: #1b71eb;
     margin: 0;
+    border-bottom: 5px solid #1b71eb;
+    width: 30%;
+    border-radius: 5rem;
+    font-weight: bolder;
+    font-size: 3rem;
+    text-align: center !important;
 }
 
-.our-services {
-    width: 100%;
-    max-width: 1400px;
-    /* Adjust this as needed */
-    margin: 5rem auto;
-    padding: 2rem 1rem 1rem 0;
-    overflow: hidden;
-    position: relative;
-}
-
-.service-container {
-    display: flex;
-    gap: 2rem;
-    width: fit-content;
-    padding-bottom: 2rem;
-    animation: scroll-left 30s linear infinite;
-    margin-top: 3rem;
-}
-
-.service-container:hover {
-    animation-play-state: paused;
-}
-
-.service-card {
-    min-width: 300px;
-    padding: 2rem 1rem;
-    text-align: center;
-    border-radius: 2rem;
-    font-size: 1.5rem;
-    font-weight: bold !important;
-    border: 2px solid rgba(0, 0, 0, 0.317);
-    /* box-shadow: 3px 3px 5px #1b71eb; */
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.626);
-    white-space: nowrap;
-}
-
-@keyframes scroll-left {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-50%);
+@media screen and (max-width:991px) {
+    .all-heads {
+        width: 60%;
     }
 }
 
-.service-km-bt {
-    margin-top: 3rem;
+@media screen and (max-width:500px) {
+    .all-heads {
+        width: 100%;
+    }
+}
+
+.services {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
-.service-km-bt a {
+.services-ani {
+    width: 40%;
+}
+
+.services-content {
+    width: 60%;
+    /* border: 2px solid rebeccapurple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-content h2 {
+    text-align: center;
     color: #1b71eb;
-    text-decoration: none;
-    padding: 1rem 2rem;
-    border: 2px solid #1b71eb;
-    border-radius: 2rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    transition: all 1s ease;
+    font-weight: bolder;
+    font-size: 3rem;
+    width: 45%;
+    border-bottom: 4px solid #1b71eb;
+    border-radius: 5rem;
 }
 
-.service-km-bt a:hover {
+.os-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    gap: 20px;
+    /* space between cards */
+    padding: 20px;
+}
+
+.os-card {
+    background-color: #f5f5f5;
+    padding: 1.5rem 0.7rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: 600;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.os-card img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.os-card p {
+    width: 82%;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.os-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.os-btn a {
+    text-decoration: none;
     background-color: #1b71eb;
     color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+}
+
+@media screen and (max-width: 990px) {
+    .services {
+        flex-direction: column-reverse;
+    }
+    .services-content {
+        width: 100%;
+        padding: 0 0.5rem;
+        /* border: 2px solid rebeccapurple; */
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .services-ani {
+        width: 70%;
+    }
+    .os-container {
+        grid-template-columns: repeat(1, 1fr);
+        p {
+            width: 90%;
+        }
+    }
+    .services-content h2 {
+        margin: 0 0.3rem;
+        width: 100%;
+    }
 }
 
 
@@ -313,7 +373,12 @@ h1 {
 .our-clients {
     padding: 2rem;
     width: 100%;
+    margin-top: 3rem;
     margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .our-client-cards {
@@ -362,14 +427,6 @@ h1 {
 .oc-card img {
     width: 80%;
     height: 10rem;
-}
-
-
-/* ----------------OUR WORK------------- */
-
-.our-work {
-    margin: 5rem 0;
-    /* width: 100%; */
 }
 
 
@@ -527,16 +584,16 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 3.5rem;
+    gap: 3rem;
 }
 
 .six-d-card {
     width: 25%;
     /* border: 2px solid red; */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.626);
-    min-height: 28rem;
+    min-height: 16rem;
     font-size: 1rem;
-    border-radius: 2rem;
+    /* border-radius: 2rem; */
     cursor: pointer;
     transition: all 0.5s ease;
     display: flex;
@@ -563,8 +620,8 @@ h1 {
 .six-d-card img {
     height: 12rem;
     width: 100%;
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
+    /* border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem; */
 }
 
 .six-d-card p {
@@ -578,4 +635,44 @@ h1 {
     .six-d-card h3 {
         width: 55%;
     }
+}
+
+.newdiv {
+    height: 200px;
+    width: 200px;
+    border: 2px solid red;
+}
+
+
+/* -------------choose US---------- */
+
+
+/* ----------------OUR WORK------------- */
+
+.why-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5rem 0;
+    width: 100%;
+    padding: 0 1rem;
+    gap: 2rem;
+}
+
+.cu-container {
+    margin-top: 2rem;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.cu-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+    padding: 1rem;
 }

@@ -53,70 +53,14 @@
             <img src="./Image/abt.png" alt="">
         </div>
         <div class="ab-content">
-            Innovader Technologies is a leading digital marketing firm dedicated to helping businesses grow their online presence and achieve measurable success. Specializing in SEO optimization, our team leverages cutting-edge strategies to improve website rankings,
-            drive targeted traffic, and boost conversion rates. We offer a comprehensive range of digital marketing services, including social media management, content creation, pay-per-click advertising, and web design, all tailored to meet the unique
-            needs of our clients. At Innovader Technologies, we are committed to delivering results-driven solutions that enhance brand visibility and maximize return on investment (ROI).
+            <strong>  Welcome to Innovader Technology </strong> – Delhi’s leading digital powerhouse built exclusively for the real estate industry. We don’t just run campaigns. We generate real, high-quality leads that convert into sales. <br>At Innovader,
+            we understand the real estate market inside out. Whether you’re a builder, broker, or developer – we know what your buyers are searching for and how to bring them to your doorstep. From high-performance ad campaigns to smart digital strategies,
+            our focus is clear: results that grow your business. <br>Backed by deep industry insights and digital innovation, we’ve helped real estate brands stand out in a crowded market – and close deals faster than ever.
         </div>
     </div>
 
-    <div class="six-d">
-        <h1 class="all-heads">Our 6-D Process</h1>
-        <div class="six-d-container">
-            <div class="six-d-card">
-                <img src="./Image/discovery.jpg" alt="">
-                <h3>Discovery</h3>
-                <p>We begin by gaining an understanding of your business, target audience, and the market. This involves research, analyzing competitors, and identifying key objectives to develop a personalized digital marketing strategy.</p>
-            </div>
-            <div class="six-d-card">
-                <img src="./Image/definition.webp" alt="">
-                <h3>Definition</h3>
-
-                <p>
-                    Using the insights obtained, we establish a clear strategy with measurable goals. This encompasses selecting the most effective channels (such as SEO, PPC, social media, etc.), setting key performance indicators (KPIs), and outlining the project scope.
-
-
-                </p>
-            </div>
-            <div class="six-d-card">
-                <img src="./Image/design.webp" alt="">
-                <h3>Design</h3>
-                <p>Our team creates captivating, user-friendly websites or marketing materials that are in line with your brand identity. We ensure that all designs are optimized for conversion, user-friendliness, and mobile responsiveness.
-
-
-                </p>
-            </div>
-            <div class="six-d-card">
-                <img src="./Image/development.jpeg" alt="">
-                <h3>Development</h3>
-                <p>During this stage, we construct and implement the technical components of your website or marketing campaigns. For websites, our focus is on creating a fully functional, SEO-optimized platform, while for campaigns, we set up tracking tools
-                    and launch advertisements.
-                </p>
-            </div>
-            <div class="six-d-card">
-                <img src="./Image/deployment.jpg" alt="">
-                <h3>Deployment</h3>
-                <p>After the completion of the website or campaigns, we deploy them across selected channels. We ensure that everything operates as planned, from seamless website functionality to ads reaching the appropriate audience.
-                </p>
-            </div>
-            <div class="six-d-card">
-                <img src="./Image/deliver.png" alt="">
-                <h3>Deliver</h3>
-                <p>Following the deployment, we continuously monitor performance and deliver comprehensive reports on the outcomes. We adjust strategies based on data to maximize return on investment and secure continued success
-                </p>
-            </div>
-
-        </div>
-    </div>
 
     <!-- Why Choose -->
-
-    <div class="abt-why-us">
-        <h1 class="all-heads">Why Choose Innovader Technolgies</h1>
-        <div class="abt-wu-content"></div>
-    </div>
-
-
-
 
 
 
@@ -141,7 +85,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js
     "></script>
 
-    <script src="script.js"></script>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+        const carousel = document.getElementById('carousel');
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentSlide].classList.add('active');
+        }
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        // Auto-play
+        setInterval(() => {
+            moveSlide(1);
+        }, 3000); // Change every 3 seconds
+    </script>
 </body>
 
 </html>
