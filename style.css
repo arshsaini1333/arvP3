@@ -8,6 +8,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 90px;
     overflow-x: hidden;
+    /* width: 100%; */
 }
 
 
@@ -182,7 +183,7 @@ h1 {
 
 .headline-box {
     position: relative;
-    min-height: 100px;
+    min-height: 200px;
     width: 100%;
     overflow: hidden;
 }
@@ -662,7 +663,6 @@ h1 {
 
 .cu-container {
     margin-top: 5rem !important;
-    display: grid;
     /* grid-template-columns: repeat(3, 1fr); */
     display: flex;
     flex-wrap: wrap;
@@ -680,7 +680,8 @@ h1 {
     /* border: 1px solid black; */
     padding: 30px 20px 20px 20px;
     position: relative;
-    min-width: 400px;
+    /* min-width: 400px; */
+    min-width: 27%;
     font-size: 1.2rem;
     font-weight: 700;
     transition: transform 0.3s ease;
@@ -694,8 +695,8 @@ h1 {
     content: "";
     position: absolute;
     top: -2.5rem;
-    left: 20px;
-    width: 4rem;
+    left: 3%;
+    width: 25%;
     height: 4rem;
     background: #1b72eb75;
     clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
@@ -713,11 +714,23 @@ h1 {
 .cu-icon {
     position: relative;
     top: -3.5rem;
-    left: 1rem;
+    left: 7%;
     z-index: 2;
     color: #1b71eb;
     font-size: 2rem;
     font-weight: bolder;
+}
+
+@media screen and (max-width: 700px) {
+    .cu-container {
+        flex-direction: column;
+    }
+    .cu-card {
+        width: 90%;
+    }
+    .cu-card::before {
+        width: 30%;
+    }
 }
 
 
