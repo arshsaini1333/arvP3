@@ -23,3 +23,11 @@ var animation = lottie.loadAnimation({
     autoplay: true,
     path: './image/animation.json' // path to your animation JSON file
 });
+
+AOS.init({
+    duration: 1000, // animation duration in ms
+    once: false, // whether animation should happen only once
+});
+
+
+//

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feature Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f8fa;
+            margin: 0;
+            padding: 40px;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            padding: 20px 20px 20px 20px;
+            position: relative;
+        }
+        
+        .card::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background: #ffddd7;
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+            z-index: 1;
+        }
+        
+        .icon {
+            position: absolute;
+            top: -6px;
+            left: 25px;
+            z-index: 2;
+            font-size: 18px;
+            color: red;
+        }
+        
+        .title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 30px;
+        }
+        
+        .description {
+            font-size: 13px;
+            color: #555;
+            margin-top: 5px;
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <i class="fas fa-cog icon"></i>
+            <div class="title">Modern Design</div>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. JustFreeSlide.com</div>
+        </div>
+        <div class="card">
+            <i class="fas fa-lightbulb icon"></i>
+            <div class="title">Creative Design</div>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. JustFreeSlide.com</div>
+        </div>
+        <div class="card">
+            <i class="fas fa-headset icon"></i>
+            <div class="title">24X7 User Support</div>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. JustFreeSlide.com</div>
+        </div>
+        <div class="card">
+            <i class="fas fa-gem icon"></i>
+            <div class="title">Business Growth</div>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. JustFreeSlide.com</div>
+        </div>
+        <div class="card">
+            <i class="fas fa-chart-line icon"></i>
+            <div class="title">Market Strategy</div>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. JustFreeSlide.com</div>
+        </div>
+        <div class="card">
+            <i class="fas fa-dollar-sign icon"></i>
+            <div class="title">Affordable Cost</div>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. JustFreeSlide.com</div>
+        </div>
+        <div class="card">
+            <i class="fas fa-shield-alt icon"></i>
+            <div class="title">Safe</div>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. JustFreeSlide.com</div>
+        </div>
+        <div class="card">
+            <i class="fas fa-bolt icon"></i>
+            <div class="title">Fast</div>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. JustFreeSlide.com</div>
+        </div>
+    </div>
+</body>
+
+</html>
