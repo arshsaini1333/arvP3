@@ -33,7 +33,7 @@ AOS.init({
 var swiper = new Swiper(".homeSwiper", {
     loop: true,
     autoplay: {
-        delay: 4000,
+        delay: 1500,
         disableOnInteraction: false,
     },
     speed: 1000,
