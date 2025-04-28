@@ -29,8 +29,8 @@ AOS.init({
     once: false, // whether animation should happen only once
 });
 
-
-var swiper = new Swiper(".homeSwiper", {
+// Home Slideer
+const swiperHome = new Swiper(".homeSwiper", {
     loop: true,
     autoplay: {
         delay: 1500,
@@ -40,4 +40,37 @@ var swiper = new Swiper(".homeSwiper", {
     effect: "fade",
 });
 
-//
+
+// Our Client Slider
+const swiper = new Swiper('.client-swiper', {
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    slidesPerView: 3,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    grabCursor: true,
+    breakpoints: {
+        320: { // Mobile screens
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        480: { // Small phones
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        768: { // Tablets
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        1024: { // Desktop
+            slidesPerView: 5,
+            spaceBetween: 30,
+        }
+    }
+});

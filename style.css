@@ -420,63 +420,108 @@ h1 {
 /* -------------------Our Clients----------------------- */
 
 .our-clients {
-    padding: 2rem;
-    width: 100%;
-    margin-top: 3rem;
-    margin-bottom: 5rem;
+    padding: 0 1rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.our-client-cards {
-    margin-top: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     width: 100%;
-    gap: 5rem;
 }
 
-.oc-card {
-    width: 20%;
-    height: 12rem;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.626);
+.client-section {
+    padding: 2rem 4rem;
+    margin: 2rem auto;
+    /* max-width: 1200px; */
+    max-width: 80%;
+    position: relative;
+}
+
+.client-swiper {
+    padding: 2rem 0;
+}
+
+.client-swiper .swiper-slide {
+    background: white;
     display: flex;
-    align-items: center;
     justify-content: center;
-    cursor: pointer;
-    transition: 0.5s all ease-in-out;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.438);
 }
 
-@media screen and (max-width:700px) {
-    .oc-card {
-        width: 40%;
+.client-swiper .swiper-slide:hover {
+    transform: scale(1.05);
+}
+
+.client-swiper img {
+    max-width: 100%;
+    /* height: auto; */
+    min-height: 8rem;
+    height: 8rem;
+    /* object-fit: contain; */
+    /* min-height: 12rem; */
+}
+
+
+/* Arrows */
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #333;
+    /* background-color: red; */
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.5rem;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 16px;
+    font-weight: bolder;
+    /* Decrease the size */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: #eee;
+}
+
+
+/* Make arrows smaller on mobile */
+
+@media (max-width: 768px) {
+    .client-section {
+        max-width: 90%;
     }
-    .our-client-cards {
-        gap: 2rem;
-    }
-    .our-clients {
-        padding: 2rem 1rem;
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 30px;
+        height: 30px;
     }
 }
 
-@media screen and (max-width:450px) {
-    .oc-card {
-        width: 70%;
-    }
+
+/* --------------Contact US-------------- */
+
+.home-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 0;
 }
 
-.oc-card:hover {
-    transform: rotate(10deg);
-}
 
-.oc-card img {
-    width: 80%;
-    height: 10rem;
-}
+/* Show validation message if input invalid */
 
 
 /* --------Footer------------ */
@@ -546,9 +591,6 @@ h1 {
         flex-direction: column;
     }
 }
-
-
-/* ----------------About------------------- */
 
 
 /* ----------------OUR WORK------------- */
